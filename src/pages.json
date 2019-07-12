@@ -2,6 +2,23 @@
 	"pages": [
 		// pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/Home/Index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"app-plus": {
+					"bounce": "vertical",
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue534",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px",
+							"color": "#999999"
+						}]
+					}
+				}
+			}
+		},
+		{
 			"path": "pages/tabBar/component/component",
 			"style": {
 				"navigationBarTitleText": "内置组件",
@@ -1107,9 +1124,9 @@
 		}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
+		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "Hello uniapp",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarBackgroundColor": "#028fff",
 		"backgroundColor": "#F8F8F8",
 		"backgroundColorTop": "#F4F5F6",
 		"backgroundColorBottom": "#F4F5F6",
@@ -1118,11 +1135,17 @@
 		}
 	},
 	"tabBar": {
-		"color": "#7A7E83",
-		"selectedColor": "#007AFF",
+		"color": "#a2a2a2",
+		"selectedColor": "#028fff",
 		"borderStyle": "black",
-		"backgroundColor": "#F8F8F8",
-		"list": [{
+		"backgroundColor": "#fff",
+		"list": [
+			{
+				"pagePath": "pages/Home/Index",
+				"iconPath": "static/component.png",
+				"selectedIconPath": "static/componentHL.png",
+				"text": "首页"
+			}, {
 				"pagePath": "pages/tabBar/component/component",
 				"iconPath": "static/component.png",
 				"selectedIconPath": "static/componentHL.png",
