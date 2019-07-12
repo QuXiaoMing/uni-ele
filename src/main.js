@@ -14,10 +14,6 @@ Vue.prototype.$backgroundAudioData = {
     formatedPlayTime: '00:00:00',
 };
 
-Object.keys(modules).forEach(key => {
-    Vue.component(key, modules[key]);
-});
-
 App.mpType = 'app';
 
 const app = new Vue({
