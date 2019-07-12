@@ -40,6 +40,7 @@ export default {
         padding: 0 5px;
     }
     &__searchbox {
+        margin-top: 8px;
         background: #fff;
         height: 36px;
         display: flex;
@@ -48,5 +49,11 @@ export default {
         color: $uni-text-color-grey;
         font-size: 14px;
     }
+
+    /* #ifdef MP-WEIXIN*/
+    uni-icon {
+        margin-top: -5px;
+    }
+    /* #endif */
 }
 </style>

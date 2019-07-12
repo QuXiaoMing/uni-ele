@@ -3,8 +3,14 @@ import App from './App';
 
 import store from './store';
 // 全局组件
-import modules from './modules';
-
+import pageHead from './components/page-head.vue';
+import pageFoot from './components/page-foot.vue';
+import uLink from '@/components/uLink.vue';
+import uniIcon from '@/components/uni-icon/uni-icon.vue';
+Vue.component('page-head', pageHead);
+Vue.component('page-foot', pageFoot);
+Vue.component('u-lint', uLink);
+Vue.component('uni-icon', uniIcon);
 Vue.config.productionTip = false;
 
 Vue.prototype.$store = store;
