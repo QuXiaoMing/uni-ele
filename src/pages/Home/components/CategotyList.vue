@@ -17,9 +17,9 @@
         </view>
     </view>
 </template>
-
+s
 <script>
-import ListIcon from '@/static/ele/Home/categoryList/icon.webp';
+import ListIcon from '@/static/ele/Home/categoryList/icon.png';
 export default {
     data() {
         return {
