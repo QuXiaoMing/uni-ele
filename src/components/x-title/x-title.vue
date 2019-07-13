@@ -1,5 +1,7 @@
 <template>
-    <view class="x-title">
+    <view class="
+    
+    ">
         <view class="x-title-divider"></view>
         <view class="">
             <slot></slot>
