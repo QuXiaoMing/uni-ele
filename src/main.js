@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import App from './App';
-
+import './styles/common.scss';
 import store from './store';
 // 全局组件
 import pageHead from './components/page-head.vue';
