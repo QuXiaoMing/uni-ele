@@ -14,6 +14,8 @@
                 <text>立即开通 ></text>
             </view>
         </view>
+        <x-title style="width: 150px; margin: 0 auto 10px;">推荐商家</x-title>
+        <home-filter></home-filter>
     </view>
 </template>
 
@@ -21,6 +23,9 @@
 import Header from './components/Header';
 import CategotyList from './components/CategotyList';
 import banner from '@/static/ele/Home/banner.png';
+import XTitle from '@/components/x-title/x-title.vue';
+import HomeFilter from './components/Filter';
+
 export default {
     data() {
         return {
@@ -29,7 +34,9 @@ export default {
     },
     components: {
         'home-header': Header,
-        CategotyList
+        CategotyList,
+        XTitle,
+        HomeFilter
     }
 };
 </script>

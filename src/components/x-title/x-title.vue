@@ -1,9 +1,7 @@
 <template>
-    <view class="
-    
-    ">
+    <view class="x-title">
         <view class="x-title-divider"></view>
-        <view class="">
+        <view class="x-title__content">
             <slot></slot>
         </view>
         <view class="x-title-divider"></view>
@@ -17,6 +15,8 @@ export default {};
 <style lang="scss">
 .x-title {
     display: flex;
+    justify-content: center;
+    align-items: center;
     .x-title__content {
         padding: 0 10px;
     }
