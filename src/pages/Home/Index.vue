@@ -7,7 +7,7 @@
         </view>
         <view class="container mb10">
             <view class="home-notice">
-                <image style="width: 17px; height: 17px;" src="/static/ele/icons/crown.png" />
+                <image style="width: 17px; height: 17px;" lazy-load src="/static/ele/icons/crown.png" />
                 <view class="flex-1">
                     <text class="bold ml5 mr5">超级会员 · </text> 每月领20元红包
                 </view>
@@ -16,6 +16,9 @@
         </view>
         <x-title style="width: 150px; margin: 0 auto 10px;">推荐商家</x-title>
         <home-filter></home-filter>
+        <view class="container mb10">
+            <x-product-card v-for="i in 10" :key="i"></x-product-card>
+        </view>
     </view>
 </template>
 
@@ -25,6 +28,7 @@ import CategotyList from './components/CategotyList';
 import banner from '@/static/ele/Home/banner.png';
 import XTitle from '@/components/x-title/x-title.vue';
 import HomeFilter from './components/Filter';
+import XProductCard from '@/components/x-product-card/x-product-card.vue';
 
 export default {
     data() {
@@ -36,7 +40,8 @@ export default {
         'home-header': Header,
         CategotyList,
         XTitle,
-        HomeFilter
+        HomeFilter,
+        XProductCard
     }
 };
 </script>
