@@ -41,11 +41,12 @@ export default {
     &__header {
         display: flex;
         flex-direction: row;
+        border-bottom: 1px solid #eee;
 
         image {
             width: 60px;
             height: 60px;
-            border: 1px solid #ccc;
+            border: 1px solid #eee;
             margin-right: 10px;
         }
     }
