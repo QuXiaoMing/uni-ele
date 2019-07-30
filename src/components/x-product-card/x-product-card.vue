@@ -4,28 +4,33 @@
             <image :src="data.logo"></image>
             <view class="x-product-card__header_info">
                 <view class="x-product-card__name">{{data.name}}</view>
-                <view class="text">
+                <view class="text color-grey">
                     评分 月售{{data.sales}}单
                 </view>
                 <view class="text flex">
-                    <view class="text flex-1">
-                        40￥起送 | 配送费￥8
+                    <view class="text flex-1 color-grey">
+                        ￥40起送 | 配送费￥8
                     </view>
-                    <view class="text">3.3km | <text class="color-primary ml5">50分钟</text></view>
+                    <view class="text color-grey">3.3km | <text class="color-primary ml5">50分钟</text></view>
                 </view>
             </view>
         </view>
         <view class="x-product-card__activities">
             <view class="x-product-card__activities_list">
-                <view class="x-product-card__activities_items" v-for="(item, index) in activities" :key="index">
+                <view class="x-product-card__activities_items color-grey" v-for="(item, index) in activities" :key="index">
                     <image :src="item.logo"></image> {{item.name}}
                 </view>
             </view>
-            <view class="x-product-card__activities_trigger" @click="isFold = !isFold">
+            <view class="x-product-card__activities_trigger color-grey" @click="isFold = !isFold">
                 {{data.activities.length}} 个活动
                 <uni-icon v-if="!isFold" type="arrowup" color="#333" size="12"></uni-icon>
                 <uni-icon v-if="isFold" type="arrowdown" color="#333" size="12"></uni-icon>
             </view>
+        </view>
+        <view class="goods-list">
+            <x-product></x-product>
+            <x-product></x-product>
+            <x-product></x-product>
         </view>
     </view>
 </template>
@@ -42,7 +47,7 @@ export default {
             type: Object,
             default() {
                 return {
-                    logo: '/static/ele/icons/crown.png',
+                    logo: '/static/ele/Home/shop.png',
                     name: '名字',
                     activities: [
                         { name: 'asdasd', logo: '/static/ele/icons/crown.png' },
@@ -67,15 +72,15 @@ export default {
 <style lang="scss">
 .x-product-card {
     padding: 20px 10px 10px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #eee;
     &__header {
         display: flex;
         flex-direction: row;
         border-bottom: 1px solid #eee;
-
+        padding-bottom: 5px;
         image {
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             border: 1px solid #eee;
             margin-right: 10px;
         }
@@ -109,6 +114,10 @@ export default {
     }
     &__activities_trigger {
         font-size: 12px;
+    }
+    .goods-list {
+        display: flex;
+        justify-content: space-between;
     }
 }
 </style>
