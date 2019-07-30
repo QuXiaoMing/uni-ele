@@ -28,9 +28,7 @@
             </view>
         </view>
         <view class="goods-list">
-            <x-product></x-product>
-            <x-product></x-product>
-            <x-product></x-product>
+            <x-product v-for="(item, index) in data.goods" :key="index" :title="item.name" :image="item.image" :favourPrice="item.price" :originalPrice="item.price"></x-product>
         </view>
     </view>
 </template>
@@ -48,11 +46,37 @@ export default {
             default() {
                 return {
                     logo: '/static/ele/Home/shop.png',
-                    name: '名字',
+                    name: '客串出品',
                     activities: [
                         { name: 'asdasd', logo: '/static/ele/icons/crown.png' },
                         { name: 'asdasd', logo: '/static/ele/icons/crown.png' },
                         { name: 'asdasd', logo: '/static/ele/icons/crown.png' }
+                    ],
+                    goods: [
+                        {
+                            name: '伊赛牛肉',
+                            image: '/static/ele/Home/good.png',
+                            price: '20',
+                            desc: '10串一手，牛肋条是肋骨间的条状肉，油花多，受热后油花与肉质融为一体，汁多味美主要原料：牛肉',
+                            sales: 600,
+                            score: 95
+                        },
+                        {
+                            name: '伊赛牛肉',
+                            image: '/static/ele/Home/good.png',
+                            price: '20',
+                            desc: '10串一手，牛肋条是肋骨间的条状肉，油花多，受热后油花与肉质融为一体，汁多味美主要原料：牛肉',
+                            sales: 600,
+                            score: 95
+                        },
+                        {
+                            name: '伊赛牛肉',
+                            image: '/static/ele/Home/good.png',
+                            price: '20',
+                            desc: '10串一手，牛肋条是肋骨间的条状肉，油花多，受热后油花与肉质融为一体，汁多味美主要原料：牛肉',
+                            sales: 600,
+                            score: 95
+                        }
                     ]
                 };
             }
@@ -71,7 +95,7 @@ export default {
 
 <style lang="scss">
 .x-product-card {
-    padding: 20px 10px 10px;
+    padding: 20px 0 10px;
     border-bottom: 1px solid #eee;
     &__header {
         display: flex;

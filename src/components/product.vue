@@ -1,6 +1,9 @@
 <template>
     <view class="product">
-        <image class="product-image" :src="image ? image : 'https://via.placeholder.com/160x160'"></image>
+        <!-- <image class="product-image" :src="image ? image : 'https://via.placeholder.com/160x160'"></image> -->
+        <view class="product-image">
+            <x-square :src="image"></x-square>
+        </view>
         <view class="product-title">{{title|| 'title'}}</view>
         <view class="product-price">
             <text class="product-price-original">￥{{favourPrice || 0}}</text>
@@ -27,12 +30,11 @@ export default {
     margin-left: 10px;
 }
 .product-image {
-    height: 100%;
     width: 100%;
 }
 
 .product-title {
-    font-size: 32upx;
+    font-size: 14px;
     word-break: break-all;
     display: -webkit-box;
     overflow: hidden;
@@ -42,17 +44,18 @@ export default {
 }
 
 .product-price {
-    font-size: 28upx;
     position: relative;
 }
 
 .product-price-original {
+    font-size: 16px;
     color: #e80080;
 }
 
 .product-price-favour {
     color: #888888;
     text-decoration: line-through;
+    font-size: 12px;
     margin-left: 10upx;
 }
 

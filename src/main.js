@@ -8,11 +8,13 @@ import pageFoot from './components/page-foot.vue';
 import uLink from '@/components/uLink.vue';
 import product from '@/components/product.vue';
 import uniIcon from '@/components/uni-icon/uni-icon.vue';
+import xQquare from '@/components/x-square/x-square.vue';
 Vue.component('page-head', pageHead);
 Vue.component('page-foot', pageFoot);
 Vue.component('u-lint', uLink);
 Vue.component('uni-icon', uniIcon);
 Vue.component('x-product', product);
+Vue.component('x-square', xQquare);
 Vue.config.productionTip = false;
 
 Vue.prototype.$store = store;
