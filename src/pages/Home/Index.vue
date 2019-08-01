@@ -17,7 +17,7 @@
         <x-title style="width: 150px; margin: 0 auto 10px;">推荐商家2</x-title>
         <home-filter></home-filter>
         <view class="container mb10">
-            <x-product-card v-for="i in 10" :key="i"></x-product-card>
+            <x-product-card @click.native="gotoShop" v-for="i in 10" :key="i"></x-product-card>
         </view>
     </view>
 </template>
@@ -42,6 +42,15 @@ export default {
         XTitle,
         HomeFilter,
         XProductCard
+    },
+
+    methods: {
+        gotoShop() {
+            console.log('gotoShop');
+            uni.navigateTo({
+                url: '/pages/Shop/Shop'
+            });
+        }
     }
 };
 </script>

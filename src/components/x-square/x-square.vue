@@ -1,6 +1,6 @@
 <template>
     <view class="x-square">
-        <image class="x-square__image" :src="src" :style="style"></image>
+        <image class="x-square__image" :src="src" :style="styles"></image>
     </view>
 </template>
 
@@ -11,7 +11,7 @@ export default {
             type: String,
             default: 'https://via.placeholder.com/160x160'
         },
-        style: {
+        styles: {
             type: [Object, String],
             default: ''
         }

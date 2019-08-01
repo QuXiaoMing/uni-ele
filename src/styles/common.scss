@@ -39,6 +39,16 @@
 .flex-1 {
     flex: 1;
 }
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-row {
+    flex-direction: row;
+}
 .ml5 {
     margin-left: 5px;
 }
@@ -46,6 +56,13 @@
     margin-right: 5px;
 }
 // font
+.font12 {
+    font-size: 12px;
+}
 .font16 {
     font-size: 16px;
+}
+// text
+.text-center {
+    text-align: center;
 }
