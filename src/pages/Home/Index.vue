@@ -14,7 +14,7 @@
                 <text>立即开通 ></text>
             </view>
         </view>
-        <x-title style="width: 150px; margin: 0 auto 10px;">推荐商家2</x-title>
+        <x-title style="width: 150px; margin: 0 auto 10px;">推荐商家</x-title>
         <home-filter></home-filter>
         <view class="container mb10">
             <x-product-card @click.native="gotoShop" v-for="i in 10" :key="i"></x-product-card>
